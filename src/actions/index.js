@@ -9,20 +9,22 @@ export function addProject(name) {
   }
 }
 
-export function addTask(projectId, name) {
+export function addTask(projectId, name, description) {
   return {
     type: ADD_TASK,
     id: projectId,
     task: {
-      name
+      name,
+      description
     }
   }
 }
 
-export function startTask(projectId, taskId) {
+export function startTask(projectId, name, description) {
   return {
     type: START_TASK,
     id: projectId,
-    taskId
+    name,
+    description
   }
 }
